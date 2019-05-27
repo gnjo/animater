@@ -29,3 +29,21 @@ obj=interceptor(obj,caller,1000/200)
 obj.add()
 
 ```
+
+# usage
+```o=interceptor(o,caller,steprate)```
+```js
+let obj={}
+obj.xyz=(url)=>{return fetch(url).then(d=>d.text()) }
+
+let caller=(symbol,step,endflg,totalstep,funccount)=>{
+ console.log(symbol,step,endflg,totalstep,funccount)
+}
+obj=interceptor(obj,caller,1000/200)
+
+let url="https://gnjo.github.io/use.js?v=1"
+obj.xyz(url)
+setTimeout(()=>{
+ obj.xyz(url)
+},3000)
+```
