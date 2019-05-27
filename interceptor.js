@@ -1,3 +1,7 @@
+/*history
+ v1.0 start
+ v1.1 fin bugfix
+*/
 ;(function(root){
  let is={}
  is.promise=function isPromise(obj) {
@@ -31,7 +35,7 @@
    ,result=func.apply(this,arguments)
    ,fin=(d)=>{endflg=true; o.funccount++ ;return d}
    ;
-   return is.promise(result)?fin(result):result.finally(fin)
+   return is.promise(result)?result.finally(fin):fin(result)
   }}
   o.keys=Object.keys(obj.__proto__).concat(Object.keys(obj)).filter(d=>is.function(obj[d]))
   o.keys.map(key=>{ obj[key]=o.I(key,obj[key]) })
