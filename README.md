@@ -18,6 +18,7 @@ I('symbol1',()=>{
 1. function wrap the promise
 2. intercept message to caller
 ```
+change: interceptor is after work object. like a Proxy
 
 # like a Proxy
 ```
