@@ -4,7 +4,7 @@ function added the interceptor
 # draft
 process
 ```
-let caller=(step,endflg,symbol)=>{
+let caller=(symbol,step,endflg)=>{
  if(endflg) console.log('end'); //
  console.log(step); //start 0 //step 50ms=fps200
 }
