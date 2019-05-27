@@ -4,7 +4,7 @@ function added the animation
 # draft
 process
 ```
-let caller=(step,endflg){
+let caller=(step,endflg)=>{
  if(endflg) console.log('end'); //
  console.log(step); //start 0 //step 50ms=fps200
 }
