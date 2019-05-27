@@ -18,3 +18,14 @@ I('symbol1',()=>{
 1. function wrap the promise
 2. intercept message to caller
 ```
+
+# like a Proxy
+```
+let obj={}
+obj.add=()=>{/**/}
+obj.del=()=>{/**/}
+
+obj=interceptor(obj,caller,1000/200)
+obj.add()
+
+```
